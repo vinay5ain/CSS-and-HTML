@@ -1,0 +1,57 @@
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.btn {
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--pure);
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--pure);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--pure);
+    border-color: var(--primary);
+}
