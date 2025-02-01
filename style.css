@@ -1,13 +1,13 @@
 @import 'utilities.css';
 
 :root {
-    --primary: #dac44c;
-    --secondary: #0f185c;
-    --dark: #042454;
-    --light: #E5E7EB;
-    --ternary: #374151;
-    --pure: #FFFFFF;
-    --accent: #8d4af0;
+    --primary: #ffb400;
+    --secondary: #1a1a2e;
+    --dark: #16213e;
+    --light: #f5f5f5;
+    --ternary: #0f3460;
+    --pure: #ffffff;
+    --accent: #e94560;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
     background: var(--dark);
     color: var(--light);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 html {
@@ -30,44 +31,28 @@ html {
 
 header {
     background: var(--secondary);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
-    padding-bottom: 5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 85%, 0 100%);
+    padding-bottom: 4rem;
+    text-align: center;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     padding: 0 20px;
     margin: 0 auto;
 }
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
+header nav {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav .left a {
     color: var(--light);
     text-decoration: none;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
     transition: all .3s ease;
@@ -78,39 +63,27 @@ header nav .left a:hover {
     transform: scale(1.1);
 }
 
-header nav {
-    padding: 2rem 0;
-}
-
 .hero {
-    padding: 4rem 0;
+    padding: 3rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .hero .left img {
-    width: 450px;
+    width: 350px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-.hero .right {
-    color: var(--light);
-}
-
-.hero .right h6 {
-    font-size: 1.8rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .hero .right h1 {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--pure);
 }
 
 .hero .right h1 span {
@@ -119,55 +92,50 @@ header nav {
 
 .hero .right p {
     line-height: 1.9;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
     color: var(--light);
 }
 
-.hero .right {
-    margin-top: -5rem;
-}
-
 section {
-    padding: 6rem 0;
+    padding: 5rem 1rem;
+    text-align: center;
 }
 
 section.services {
     background: var(--secondary);
-    padding: 6rem 0;
 }
 
 section.services .card-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 section.services .card-wrapper .card {
-    background: var(--dark);
-    padding: 3rem 2rem;
-    position: relative;
+    background: var(--ternary);
+    padding: 2rem;
+    border-radius: 10px;
     text-align: center;
     transition: all .3s ease;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 198, 207, 0.3);
+    box-shadow: 0px 4px 10px rgba(233, 69, 96, 0.3);
 }
 
 section.services .card-wrapper .card:hover {
     background: var(--primary);
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
-section.services .card-wrapper .card:hover h2, 
-section.services .card-wrapper .card:hover p {
+section.services .card-wrapper .card h2, 
+section.services .card-wrapper .card p {
     color: var(--pure);
 }
 
 footer {
     background: var(--secondary);
     text-align: center;
-    padding: 5rem 0;
-    color: var(--light);
+    padding: 4rem 1rem;
 }
 
 footer .footer-socials a {
@@ -183,6 +151,23 @@ footer .footer-socials a:hover {
 }
 
 footer .copyright {
-    color: var(--ternary);
+    color: var(--light);
     font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .left img {
+        width: 280px;
+    }
+    .hero .right h1 {
+        font-size: 2.5rem;
+    }
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
 }
