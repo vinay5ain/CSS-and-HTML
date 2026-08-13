@@ -85,10 +85,3 @@ This project demonstrates:
 
 ## Author
 Vinay Kumar Sain — GitHub: @vinay5ain
-
----
-
-If you want, I can:
-- Improve wording or add a screenshot section with embedded images from this repo,
-- Add a small JavaScript file to enable the review slider and a simple client-side contact validation, or
-- Create a GitHub Pages deployment branch and add a workflow to publish the site (I'll only push if you ask).
